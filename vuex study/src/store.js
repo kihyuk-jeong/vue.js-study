@@ -6,9 +6,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {// data의 역할
     allUsers: [
-      {userId: 'hoza123', password: '123', name: '연희', address: 'Seoul', src:'https://goo.gl/oqLfJR'},
-      {userId: 'max123', password: '456', name: '이기원', address: '도미니카공화국', src:'https://goo.gl/Ksk9B9'},
-      {userId: 'lego123', password: '789', name: 'Lego', address: 'Busan', src:'https://goo.gl/x7SpCD'}
+      // {userId: 'hoza123', password: '123', name: '연희', address: 'Seoul', src:'https://goo.gl/oqLfJR'},
+      // {userId: 'max123', password: '456', name: '이기원', address: '도미니카공화국', src:'https://goo.gl/Ksk9B9'},
+      // {userId: 'lego123', password: '789', name: 'Lego', address: 'Busan', src:'https://goo.gl/x7SpCD'}
     ]
   },
 getters: {

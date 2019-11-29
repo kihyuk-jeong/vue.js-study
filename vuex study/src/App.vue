@@ -24,20 +24,24 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="red" dark fixed app>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>하앙</v-toolbar-title>
+      <!-- 여기까지 v-list -->
+    <v-toolbar color="indigo" dark fixed app>
+      <v-toolbar-side-icon @click.stop="drawer = !drawer">  </v-toolbar-side-icon>
+      <v-toolbar-title>회원관리시스템</v-toolbar-title>
     </v-toolbar>
+    <!-- 헤드  -->
     <v-content>
       <router-view/>
     </v-content>
     <v-footer color="red" app>
-      <span class="white--text">&copy; 2017</span>
+      <span class="white--text">&copy; {{this.$moment(new Date()).format('YYYY-MM-DD')}} </span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+
+
   export default {
     data: () => ({
       drawer: null
