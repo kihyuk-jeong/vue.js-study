@@ -1,0 +1,58 @@
+<!-- @keyup을 통해 글쓰기 미리보기하는 방법 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰 기초 익히기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+   
+</head>
+<body>
+    <div id="app">
+        {{name}}
+        <button @click="contextUpdated">go</button>
+    </div>
+
+    
+    <div id="app-1">
+        {{name}}
+        <button @click="contextUpdated">go</button>
+
+    </div>
+
+
+    <script>
+       const app= new Vue({
+            el: '#app',
+            data : {
+               name : "KH"
+              
+            },
+            methods: {
+                contextUpdated() {
+                    app1.name = 'KH updated';
+                }
+                
+                
+             },
+        })
+
+      const app1=  new Vue({
+            el: '#app-1',
+            data : {
+               name : "KH1"
+              
+            },
+            methods: {
+                contextUpdated() {
+                    app.name = 'KH1 updated';
+                }
+                
+             },
+        })
+    </script>
+</body>
+</html>

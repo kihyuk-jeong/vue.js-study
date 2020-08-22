@@ -1,0 +1,41 @@
+<!-- @keyup을 통해 글쓰기 미리보기하는 방법 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰 기초 익히기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ year }}
+        <form v-on:submit="submit" >
+            <!-- <input type="text" :value="text" @keyup="updateText"><br> -->
+            <input type="text" v-model="texts"><br>
+            {{ texts }}<br>
+            <button type ="submit">전송</button>
+        </form>
+
+    </div>
+    
+    <script>
+        new Vue({
+            el: '#app',
+            data : {
+                year: 2020,
+                texts : 'text'
+            },
+            methods: {
+                submit() {
+                    alert("전송완료");
+                },
+                // updateText(event) {
+                //     this.text = event.target.value;
+                // }
+             }
+        })
+    </script>
+</body>
+</html>
