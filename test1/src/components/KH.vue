@@ -1,9 +1,15 @@
 <template>
-    <h1>{{title}}</h1>
-    {{num}}
-    <div v-if='!ck'> {{ name }} </div>    
-    <div v-else>KHH </div>
-    <button @click ="updateName">클릭해보세용</button>
+    <!-- <h1>{{title}}</h1> -->
+    <!-- {{num}} -->
+    <!-- <div v-if='!ck'> {{ name }} </div>     -->
+    <!-- <div v-else>KHH </div> -->
+
+    <p>header</p>
+    <slot name="header"></slot>
+    <p>body</p>
+    <slot></slot>
+    <p>footer</p>
+    <button @click ="updateName">클릭해보세용!</button>
 </template>
 
 <script>
