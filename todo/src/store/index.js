@@ -1,5 +1,7 @@
+  
 import Vue from 'vue';
 import Vuex from 'vuex';
+import axios from "axios";
 
 Vue.use(Vuex);
 
@@ -36,7 +38,26 @@ export default new Vuex.Store({
     },
     // 메서드
     actions: {
-
+        getUsers({ commit }) {
+            axios.get('https://jsonplaceholder.typicode.com/users').then(res => {
+                commit('SET_USERS', res.data);
+            });
+        },
+        addTodo({ commit }, value) {
+            setTimeout(function () {
+                commit('ADD_TODO', value);
+            }, 500);
+        },
+        toggleTodo({ commit }, payload) {
+            setTimeout(function () {
+                commit('TOGGLE_TODO', payload);
+            }, 500);
+        },
+        deleteTodo({ commit }, todoId) {
+            setTimeout(function () {
+                commit('DELETE_TODO', todoId);
+            }, 500);
+        }
     },
 
     // 컴퓨티드
